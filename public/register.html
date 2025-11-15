@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Register - DemoApp2</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="centered">
+      <div class="card">
+        <h1>Create Account</h1>
+        <div id="error" class="hidden error"></div>
+        
+        <label>Username
+          <input id="username" type="text" autocomplete="username" placeholder="3-30 alphanumeric characters" />
+        </label>
+        
+        <label>Password
+          <input id="password" type="password" autocomplete="new-password" placeholder="At least 6 characters" />
+        </label>
+        
+        <label>Email
+          <input id="email" type="email" autocomplete="email" placeholder="your@email.com" />
+        </label>
+        
+        <button id="registerBtn">Register</button>
+        
+        <p style="text-align: center; margin-top: 1.5em; font-size: 0.9em;">
+          Already have an account? <a href="/">Sign in here</a>
+        </p>
+      </div>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+# Development Dockerfile with nodemon for hot-reload
+FROM node:18-alpine
+
+WORKDIR /usr/src/app
+
+# Install all dependencies (including devDependencies for tests and nodemon)
+COPY package*.json ./
+RUN npm install
+
+# Bundle app source
+COPY . .
+
+# Copy wait-for-db script
+COPY wait-for-db.sh /usr/local/bin/wait-for-db.sh
+RUN chmod +x /usr/local/bin/wait-for-db.sh
+
+EXPOSE 3000
+
+# Run with nodemon for hot-reload during development
+CMD ["sh", "-c", "wait-for-db.sh mongo 27017; npm run seed || true; npm run dev"]

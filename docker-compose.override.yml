@@ -1,0 +1,14 @@
+# Override for local development with hot-reload
+# Run: docker-compose -f docker-compose.yml -f docker-compose.override.yml up
+
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development

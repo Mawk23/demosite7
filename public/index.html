@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login - DemoApp2</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="centered">
+      <div class="card">
+        <h1>Sign in</h1>
+        <div id="error" class="hidden error"></div>
+        <label>Username
+          <input id="username" type="text" autocomplete="username" />
+        </label>
+        <label>Password
+          <input id="password" type="password" autocomplete="current-password" />
+        </label>
+        <button id="loginBtn">Login</button>
+        
+        <p style="text-align: center; margin-top: 1.5em; font-size: 0.9em;">
+          Don't have an account? <a href="/register.html">Create one here</a>
+        </p>
+      </div>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
